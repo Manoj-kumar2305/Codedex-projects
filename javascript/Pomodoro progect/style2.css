@@ -1,0 +1,105 @@
+html {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #d8e9ef;
+  background-image: linear-gradient(-20deg, #17153B 0%, #C8ACD6 100%);
+  background-size: cover;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 40px;
+  margin: 50px;
+  margin-top: 0px;
+  background-color: transparent;
+  color: #d8e9ef;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button:hover {
+  background-color: #2E236C;
+  color: white;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.app-message {
+  height: 20px;
+  margin: 10px auto 20px auto;
+  font-size: 30px;
+}
+
+span {
+  font-size: 90px;
+  font-family: 'Rubik Pixels', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 3px solid #433D8B;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-style: normal;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: 1.25em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: #5e5dcd;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #acc6cc; /* Change this to the desired color */
+}
