@@ -18,12 +18,16 @@ export default function QuoteGenerator() {
         "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt"
       ];
       const [quote, setQuote] = useState(quotes[Math.floor(Math.random() * quotes.length)]);
+      function handleQoute(){
+        setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+        document.getElementById('quote-box').style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+      }
       return (
         <>
           <Header />
           <div id="quote-box">
             <p id="text">{quote}</p>
-            <button id="new-quote" onClick={() => setQuote(quotes[Math.floor(Math.random() * quotes.length)])}>
+            <button id="new-quote" onClick={handleQoute}>
               New Quote
             </button>
           </div>
