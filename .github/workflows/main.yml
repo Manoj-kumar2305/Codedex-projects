@@ -4,42 +4,42 @@ on:
   push:
     branches:
       - main
-
     
 jobs:
   build-and-deploy:
     runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
 
     steps:
-      - name: Cache Node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
+      
       - name: Checkout code
-        uses: actions/checkout@v3.1.0  
+        uses: actions/checkout@v4  # Use the latest version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3.1.0 
+        uses: actions/setup-node@v4  # Use the latest version
         with:
           node-version: '20'  # Specify the desired Node version
+      - name: Configure Git user
+        run: |
+          git config --global user.name "manoj"
+          git config --global user.email "manoj73962@gmail.com"
+          git config --global url."https://${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+    
+
+      # - name: Cache Node modules
+      #   uses: actions/cache@v4  # Use the latest version
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: |
-          cd My_first_react_app
-          npm install
+        run: npm install
 
       - name: Build project
-        run: |
-          cd My_first_react_app
-          npm run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          cd My_first_react_app
-          npm run deploy
+        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
