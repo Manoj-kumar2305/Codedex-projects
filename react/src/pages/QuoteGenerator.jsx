@@ -1,4 +1,3 @@
-import Header from '../components/Header.jsx'
 import { useState } from 'react'
 
 export default function QuoteGenerator() {
@@ -24,7 +23,6 @@ export default function QuoteGenerator() {
       }
       return (
         <>
-          <Header />
           <div id="quote-box">
             <p id="text">{quote}</p>
             <button id="new-quote" onClick={handleQoute}>

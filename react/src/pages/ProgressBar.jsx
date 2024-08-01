@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import { useState } from 'react';
 
 export default function ProgressBar() {
@@ -9,7 +8,6 @@ export default function ProgressBar() {
   } 
   return (
     <>
-    <Header />
     <div className="container">
       <div className='progressBar'>
         <h1>Progress Bar</h1>

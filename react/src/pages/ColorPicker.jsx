@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Header from '../components/Header.jsx';
 
 const ColorPicker = () => {
   const [selectedColor, setSelectedColor] = useState({ hex: null, name: null });
@@ -60,7 +59,6 @@ const ColorPicker = () => {
 
   return (
     <>
-    <Header />
     <div className="color-picker">
       <h1>Color Picker</h1>
       <div className="color-list">

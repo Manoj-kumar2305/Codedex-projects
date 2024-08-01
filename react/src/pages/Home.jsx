@@ -1,10 +1,8 @@
-import Header from '../components/Header.jsx';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-      <Header />
       <div id="homeLinks">
         <h1 id="selection">Select a project</h1>
         <ul id="links">

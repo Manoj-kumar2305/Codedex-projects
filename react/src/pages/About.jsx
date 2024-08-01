@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+
 import linkedin from '../assets/linkedin.png';
 import giticon from '../assets/github.png';
 
 export default function About() {
   return (
     <>
-      <Header />
       <div id="about">
         <div className="aboutcontainer">
           <h1>Hello, I'm Manoj</h1>
