@@ -2,7 +2,7 @@
   "name": "react",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://manoj-kumar2305.github.io/Codedex-projects/react",
+  "homepage": "https://manoj-kumar2305.github.io/Codedex-projects/",
   "type": "module",
   "scripts": {
     "dev": "vite",
