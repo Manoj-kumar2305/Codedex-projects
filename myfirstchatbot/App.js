@@ -30,10 +30,7 @@ const {
   async function run() {
     const chatSession = model.startChat({
       generationConfig,
-   // safetySettings: Adjust safety settings
-   // See https://ai.google.dev/gemini-api/docs/safety-settings
-      history: [
-      ],
+      history: [],
     });
   
     const result = await chatSession.sendMessage("TELL ME A JOKE");
