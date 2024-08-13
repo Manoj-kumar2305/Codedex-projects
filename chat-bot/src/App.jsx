@@ -7,6 +7,7 @@ import {
   HarmCategory,
   HarmBlockThreshold,
 } from '@google/generative-ai';
+import ReactMarkdown from 'react-markdown';
 
 const App = () => {
   const [messages, setMessages] = useState([]);
@@ -65,7 +66,7 @@ const App = () => {
   }
 
   return (
-    <div className="flex flex-col h-screen w-screen font-bold text-lg	">
+    <div className="flex flex-col h-screen w-screen text-lg">
       <header className="bg-primary text-primary-foreground px-4 py-1 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="relative flex shrink-0 overflow-hidden rounded w-8 h-8 p-[1%]">
@@ -101,8 +102,8 @@ const App = () => {
                 message.type === 'sent'
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-muted'
-              } rounded-2xl p-3 max-w-[75%] `}>
-              <p>{message.text}</p>
+              } rounded-2xl p-3 max-w-[75%] markdown prose `}>
+              <ReactMarkdown>{message.text}</ReactMarkdown>
             </div>
             <span
               className={`relative flex shrink-0 overflow-hidden rounded-full w-8 h-8 border ${
