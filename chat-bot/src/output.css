@@ -591,20 +591,12 @@ h1, h2, h3, h4, h5, h6 {
   --tw-contain-style:  ;
 }
 
-.static {
-  position: static;
-}
-
 .relative {
   position: relative;
 }
 
 .m-10 {
   margin: 2.5rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .flex {
@@ -639,22 +631,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
 }
 
-.min-h-\[80px\] {
-  min-height: 80px;
-}
-
-.min-h-\[30px\] {
-  min-height: 30px;
-}
-
-.min-h-\[40px\] {
-  min-height: 40px;
-}
-
-.min-h-\[0px\] {
-  min-height: 0px;
-}
-
 .min-h-\[50px\] {
   min-height: 50px;
 }
@@ -667,16 +643,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 2rem;
 }
 
+.w-\[75\%\] {
+  width: 75%;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[75\%\] {
-  width: 75%;
 }
 
 .max-w-\[75\%\] {
@@ -693,10 +669,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .resize-none {
   resize: none;
-}
-
-.list-disc {
-  list-style-type: disc;
 }
 
 .flex-col {
@@ -749,6 +721,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -759,24 +739,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .rounded-md {
   border-radius: calc(var(--radius) - 2px);
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
-.rounded-l-2xl {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-.rounded-l {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border {
@@ -795,9 +757,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: hsl(var(--background));
 }
 
-.bg-gray-50 {
+.bg-cyan-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
 }
 
 .bg-muted {
@@ -820,9 +782,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem;
 }
 
+.p-\[1\%\] {
+  padding: 1%;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -835,10 +806,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -849,12 +816,61 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-\[\%\] {
+  font-size: %;
+}
+
+.text-\[5\%\] {
+  font-size: 5%;
+}
+
+.text-\[50\%\] {
+  font-size: 50%;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
+}
+
+.text-slate-50 {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\%5\] {
+  color: %5;
 }
 
 .ring-offset-background {
