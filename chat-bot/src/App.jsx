@@ -32,15 +32,19 @@ const App = () => {
     generationConfig,
     history: [
       {
-        role: "user",
+        role: 'user',
         parts: [
-          {text: "from now on i will give our chat history along with the questions i want to ask . make sure to reply only after carefully understanding the history . in the history the model is you. if the history is not provied then dont mention history not provided and reply normally . input1 contains current query and input2 contains the history dont mention anything about inputs\n"},
+          {
+            text: 'from now on i will give our chat history along with the questions i want to ask . make sure to reply only after carefully understanding the history . in the history the model is you. if the history is not provied then dont mention history not provided and reply normally . input1 contains current query and input2 contains the history dont mention anything about inputs\n',
+          },
         ],
       },
       {
-        role: "model",
+        role: 'model',
         parts: [
-          {text: "Okay, I understand.  Please provide the chat history and your question. I will read it carefully and provide a relevant and appropriate response. \n"},
+          {
+            text: 'Okay, I understand.  Please provide the chat history and your question. I will read it carefully and provide a relevant and appropriate response. \n',
+          },
         ],
       },
     ],
@@ -48,19 +52,31 @@ const App = () => {
 
   async function handleSendMessage() {
     if (input.trim()) {
-      const sentMessage = { id: messages.length + 1, type: 'sent', text: input };
-      const result = await chatSession.sendMessage(`input1:${input}\ninput2:${history}`);
+      const sentMessage = {
+        id: messages.length + 1,
+        type: 'sent',
+        text: input,
+      };
+      const loadingMessage = {
+        id: messages.length + 2,
+        type: 'received',
+        text: 'Thinking...',
+      };
+      setMessages([...messages, sentMessage, loadingMessage]);
+
+      const result = await chatSession.sendMessage(
+        `input1:${input}\ninput2:${history}`
+      );
       const receivedMessage = {
         id: messages.length + 2,
         type: 'received',
         text: result.response.text(),
       };
-      
+
       setMessages([...messages, sentMessage, receivedMessage]);
       const userInput = 'user:' + input + '\n';
       const modelResponse = 'model:' + result.response.text();
       setHistory(history + userInput + modelResponse);
-      console.log(input, history);
       setInput('');
     }
   }
@@ -80,7 +96,7 @@ const App = () => {
         </div>
         <button className="inline-flex items-center justify-center rounded-md text-sm font-medium h-10 w-10 text-primary-foreground hover:bg-primary/20"></button>
       </header>
-      <div className="flex-1 overflow-auto p-4 space-y-4 ">
+      <div className="flex-1 overflow-auto p-4 space-y-4 " id="chat">
         {messages.map((message) => (
           <div
             key={message.id}
