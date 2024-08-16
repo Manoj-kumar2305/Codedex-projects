@@ -721,10 +721,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.overflow-scroll {
-  overflow: scroll;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -898,4 +894,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
+}
+
+@media (min-width: 640px) {
+  .sm\:m-20 {
+    margin: 5rem;
+  }
+
+  .sm\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .sm\:w-\[80\%\] {
+    width: 80%;
+  }
 }

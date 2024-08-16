@@ -101,7 +101,7 @@ const App = () => {
         </div>
         <button className="inline-flex items-center justify-center rounded-md text-sm font-medium h-10 w-10 text-primary-foreground hover:bg-primary/20"></button>
       </header>
-      <div className="flex-1 overflow-auto p-4 space-y-4 " id="chat">
+      <div className="flex-1 overflow-auto p-4 space-y-4 sm:mx-20" id="chat">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -156,7 +156,7 @@ const App = () => {
             }}
             onChange={(e) => setInput(e.target.value)}></textarea>
           <button
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium h-10 w-15 text-primary-foreground hover:bg-primary/20"
+            className="inline-flex items-center justify-center rounded-md text-sm font-medium h-10 w-15 p-4 rounded text-primary-foreground hover:bg-primary/20"
             onClick={handleSendMessage}>
             Send
           </button>
