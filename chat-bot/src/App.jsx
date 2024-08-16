@@ -89,7 +89,7 @@ const App = () => {
   }
 
   return (
-    <div className="flex flex-col h-screen w-screen text-lg">
+    <div className="flex flex-col h-[100%] sm:h-screen w-screen text-lg">
       <header className="bg-primary text-primary-foreground px-4 py-1 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="relative flex shrink-0 overflow-hidden rounded w-8 h-8 p-[1%]">
