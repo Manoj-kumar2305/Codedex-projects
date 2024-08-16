@@ -8,7 +8,7 @@ import {
   HarmBlockThreshold,
 } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   const [messages, setMessages] = useState([]);
