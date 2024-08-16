@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import './output.css';
 import robot from './assets/robot.png';
 import person from './assets/person.png';
@@ -15,6 +15,7 @@ const App = () => {
   const [history, setHistory] = useState('');
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   const genAI = new GoogleGenerativeAI(apiKey);
+  const msgEndRef = useRef(null);
 
   const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-flash',
@@ -49,6 +50,10 @@ const App = () => {
       },
     ],
   });
+
+  useEffect(() => {
+    msgEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   async function handleSendMessage() {
     if (input.trim()) {
@@ -133,6 +138,7 @@ const App = () => {
             </span>
           </div>
         ))}
+        <div ref={msgEndRef}/>
       </div>
       <div className=" flex justify-center">
         <div className="bg-background rounded-2xl border-t px-4 py-3 flex items-center gap-2 w-[75%] m-10">

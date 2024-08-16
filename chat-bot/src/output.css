@@ -721,6 +721,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -814,10 +818,6 @@ h1, h2, h3, h4, h5, h6 {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .font-medium {
