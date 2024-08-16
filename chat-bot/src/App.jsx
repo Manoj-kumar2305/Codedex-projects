@@ -9,6 +9,7 @@ import {
 } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   const [messages, setMessages] = useState([]);
@@ -164,6 +165,7 @@ const App = () => {
         </div>
       </div>
       <SpeedInsights/>
+      <Analytics/> 
     </div>
   );
 };
